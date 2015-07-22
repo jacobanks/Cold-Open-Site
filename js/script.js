@@ -126,10 +126,10 @@ function getShowWithId(theUrl)
 
     //If mouse enters or leaves button are set the image
     $('#download').mouseenter(function() {
-      $('#button').attr('src', 'openButtonHover.png');
+      $('#button').attr('src', 'img/openButtonHover.png');
     });
     $('#download').mouseleave(function() {
-      $('#button').attr('src', 'openButton.png');
+      $('#button').attr('src', 'img/openButton.png');
     });
   });
 
