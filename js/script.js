@@ -1,4 +1,7 @@
 //Insert Parameters into url
+
+    // window.location = "coldopen://show/167571";
+
 function insertParam(key, value) 
 {
   key = escape(key); value = escape(value);
@@ -49,6 +52,12 @@ function getUrlParams()
 var params = getUrlParams();
 var showId = params.ShowId;
 var xml2json = new XMLtoJSON();
+
+if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+  window.onload = function() {
+    document.getElementById("l").src = "coldopen://show/" + showId;
+  };
+}
 
 //Get List of banners from thetvdb.com
 function getBannersWithID(theUrl)
